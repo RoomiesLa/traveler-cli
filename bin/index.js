@@ -1,11 +1,10 @@
 #! /usr/bin/env node
 
 import { Command } from "commander";
-import { list } from "../commands/list.js";
+import { report } from "../commands/report.js";
 
-const program = new Command("list");
+const program = new Command();
 
-program.command("login").description("...").action(list);
-program.command("report").description("...").action(list);
+program.command("report").description("...").action(report);
 
 program.parse()
